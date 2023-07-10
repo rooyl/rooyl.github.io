@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li class="active"><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="content" style="padding-left: 20px;">
+        <a href="index.html" class="buttonBack">&#10094;</a>
+    </div>
+    <div class="containerOverview content">
+        <h1>Overview</h1><br>
+        <p>The primary purpose of this project is for me to share my knowledge on our CMSC 57 course. <br>As instructed by our professor, we were told to choose three significant topics <br>from three periods of the course divided by long exams.</p>
+        <p>Here are my chosen topics for each period:</p>
+        <div class="containerTable content">
+          <table>
+              <tr>
+                <th>Period 1</th>
+                <th>Period 2</th>
+                <th>Period 3</th>
+              </tr>
+              <tr>
+                <td><a href="basicsofcounting.html" style="text-decoration: none; color: #c6c6c6;">Basics of Counting</a></td>
+                <td><a href="finiteprobability.html" style="text-decoration: none; color: #c6c6c6;">Finite Probability</a></td>
+                <td><a href="graphsandgraphmodels.html" style="text-decoration: none; color: #c6c6c6;">Graphs and Graph Models</a></td>
+              </tr>
+              <tr>
+                <td><a href="pigeonhole.html" style="text-decoration: none; color: #c6c6c6;">Pigeonhole Principle</a></td>
+                <td><a href="probabilitytheory.html" style="text-decoration: none; color: #c6c6c6;">Probability Theory</a></td>
+                <td><a href="shortestpath.html" style="text-decoration: none; color: #c6c6c6;">Shortest Path Problems</a></td>
+              </tr>
+              <tr>
+                <td><a href="permuandcombi.html" style="text-decoration: none; color: #c6c6c6;">Permutation and Combination</a></td>
+                <td><a href="bayestheorem.html" style="text-decoration: none; color: #c6c6c6;">Bayes' Theorem</a></td>
+                <td><a href="graphcoloring.html" style="text-decoration: none; color: #c6c6c6;">Graph Coloring</a></td>
+                </tr>
+            </table>
+            <div style="padding-top: 50px;">
+              <p><small>Click on any topic to view content.</small></p>
+            </div>
+      </div>
+    </div>
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+  
+      function updateCursorPosition(e) {
+          var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+          var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  
+          cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+      }
+  
+      document.addEventListener("mousemove", updateCursorPosition);
+  </script>
+</body>
+</html>

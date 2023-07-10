@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="buttonContent content">
+        <button class="buttonLeft" onclick="window.location.href = 'permuandcombi.html'">&#10094; Permutation and Combination</button>
+        <button class="buttonRight" onclick="window.location.href = 'probabilitytheory.html'">Probability Theory &#10095;</button>
+    </div>
+    <div class="containerOverview content">
+        <h1>Finite Probability</h1><br>
+        <p>Finite probability refers to the study of probability in situations where the sample space, or the set of all possible outcomes, is finite. It deals with assigning probabilities to individual outcomes or events and calculating the likelihood of specific outcomes occurring. Finite probability allows us to quantify uncertainties and make informed decisions based on the understanding of probabilities associated with different events.</p><br>
+        <p>Studying finite probability has provided me with a framework to analyze and assess the likelihood of events in situations where the sample space is finite. I have learned to assign probabilities to individual outcomes by considering the relative frequencies or by using theoretical reasoning. Additionally, I have learned to calculate probabilities using simple formulas and techniques such as counting methods, permutations, and combinations. This knowledge has enabled me to make informed assessments of risk, evaluate uncertainties, and analyze real-life scenarios based on the understanding of finite probability.</p><br>
+        <h3>Real-Life Example</h3>
+        <img src="coinflip.png" style="width: 40%; height: auto; float: right;" alt="coinflip"><br>
+        <p>Imagine you are flipping a fair coin. The sample space consists of two possible outcomes: heads (H) or tails (T). Since the sample space is finite, we can assign probabilities to each outcome.</p><br>
+        <p>The probability of flipping heads is 1/2 because there is one favorable outcome (H) out of the two possible outcomes (H and T). Similarly, the probability of flipping tails is also 1/2 because there is one favorable outcome (T) out of the two possible outcomes (H and T).</p><br>
+        <p>Therefore, in this scenario of flipping a fair coin, <br>the probability of getting either heads or tails is 1/2 or 50%.</p><br><br>
+      </div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+    
+        function updateCursorPosition(e) {
+            var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+            cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+        }
+    
+        document.addEventListener("mousemove", updateCursorPosition);
+    </script>
+</body>
+</html>

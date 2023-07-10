@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="buttonContent content">
+        <button class="buttonLeft" onclick="window.location.href = 'overview.html'">&#10094; Overview</button>
+        <button class="buttonRight" onclick="window.location.href = 'pigeonhole.html'">Pigeonhole Principle &#10095;</button>
+    </div>
+    <div class="containerOverview content">
+        <h1>Basics of Counting</h1><br>
+        <p>Counting is a fundamental concept in discrete mathematics that deals with determining the number of elements in a set or the number of possible outcomes in a given scenario. It provides a framework for systematically counting objects and solving combinatorial problems.</p><br>
+        <p>In discrete mathematics, we often encounter finite sets or scenarios where we are interested in finding the number of elements or possibilities. To count these elements, we use various counting techniques such as the rule of sum, the rule of product, permutations, combinations, and binomial coefficients.</p><br>
+        <p>Studying the basics of counting has provided me with essential tools and techniques for quantifying and enumerating different possibilities. I have learned about the principles of multiplication, addition, and subtraction, which are the building blocks of counting. These principles have enabled me to systematically calculate the number of outcomes, combinations, or arrangements in various scenarios. Understanding the basics of counting has proven valuable in problem-solving, probability analysis, and decision-making, allowing me to make informed choices based on a clear understanding of the available options.</p><br>
+        <h3>1. Rule of Sum (Addition)</h3>
+        <p>If there are 'm' ways to do task A and 'n' ways to do task B, and the tasks cannot be done simultaneously, then there are 'm + n' ways to choose between doing task A or task B.</p><br>
+        <h3>2. Rule of Product (Multiplication)</h3>
+        <p>If there are 'm' ways to do task A and 'n' ways to do task B, and the tasks are done sequentially, then there are 'm * n' ways to do both tasks.</p><br>
+        <h3>3. Permutations</h3>
+        <p>A permutation is an arrangement of objects in a specific order. If we have 'n' distinct objects and want to arrange them in a specific order, the number of permutations is denoted by 'n! (n factorial)' and is calculated as the product of all positive integers from 1 to 'n'. For example, 5! = 5 * 4 * 3 * 2 * 1 = 120.</p><br>
+        <h3>4. Combinations</h3>
+        <p>A combination is a selection of objects without regard to the order. If we have 'n' distinct objects and want to select 'r' objects from them, the number of combinations is denoted by 'nCr' or 'C(n, r)' and can be calculated using the formula: nCr = n! / (r! * (n - r)!). For example, C(5, 2) = 5! / (2! * (5 - 2)!) = 10.</p><br>
+        <h3>5. Binomial Coefficients</h3>
+        <p>Binomial coefficients are a special case of combinations. If we have an expression of the form (a + b)^n, the coefficient of a^r * b^(n-r) is denoted by 'nCr' or 'C(n, r)' and can be calculated using the formula mentioned.</p><br>
+      </div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+    
+        function updateCursorPosition(e) {
+            var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+            cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+        }
+    
+        document.addEventListener("mousemove", updateCursorPosition);
+    </script>
+</body>
+</html>

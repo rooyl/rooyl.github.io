@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li class="active"><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="buttonContent content">
+        <button class="buttonLeft" onclick="window.location.href = 'basicsofcounting.html'">&#10094; Basics of Counting</button>
+        <button class="buttonRight" onclick="window.location.href = 'permuandcombi.html'">Permutation and Combination &#10095;</button>
+    </div>
+    <div class="containerOverview content">
+        <h1>Pigeonhole Principle</h1><br>
+        <img src="pigeon.png" style="width: 30%; height: auto; float: left;" alt="pigeon">
+        <p>The Pigeonhole Principle is a fundamental principle in combinatorics, which deals with counting, arrangements, and the distribution of objects.</p>
+        <p>The principle states that if you have more objects than the number of containers available to hold them, then at least one container must contain more than one object. In other words, if you try to distribute a set of items into a smaller number of categories or compartments, there will always be at least one category that contains more than one item.</p><br>
+        <p>The Pigeonhole Principle teaches us an important concept about counting and allocation. It reminds us that when we have limited resources or spaces available, and we need to distribute a larger number of items into those spaces, there will always be a situation where some spaces are overcrowded. It helps us understand that even when the number of items and spaces may seem unrelated, there is a guaranteed pattern that emerges when we try to allocate them.</p><br>
+        <h3>Real-Life Example</h3>
+        <p>Let's consider a classroom with 25 students. Each student is assigned a unique student identification number from 1 to 25. However, there are only 24 available lockers in the hallway for students to store their belongings. According to the Pigeonhole Principle, at least two students must share a locker.
+
+          In this example, the students represent the items to be allocated, and the lockers represent the containers. Since there are more students (25) than lockers (24), there will always be at least one locker that has to accommodate more than one student. This real-life scenario illustrates how the Pigeonhole Principle applies in situations where the number of items exceeds the available compartments or resources.</p><br><br>
+        </div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+    
+        function updateCursorPosition(e) {
+            var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+            cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+        }
+    
+        document.addEventListener("mousemove", updateCursorPosition);
+    </script>
+</body>
+</html>

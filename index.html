@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <video playsinline autoplay muted loop poster="bgvid.jpg" id="bgvid">
+    <source src="bgvid.mp4" type="video/mp4">
+  </video>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container content">
+        <h1>Welcome to G-ePo.</h1><br>
+        <p>G-ePo is short for "Gerasta's ePortfolio" developed by yours truly, Rhyle Gerasta. <br>This website is an online portfolio and is part of the final requirements <br>for CMSC 57: Discrete Mathematical Structures in Computer Science II. <br><br>You may click the "See Overview" button below to begin.</p>
+        <div class="buttons">
+            <a href="overview.html" class="button">See Overview</a>
+        </div>
+    </div>
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+  
+      function updateCursorPosition(e) {
+          var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+          var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  
+          cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+      }
+  
+      document.addEventListener("mousemove", updateCursorPosition);
+  </script>
+</body>
+</html>

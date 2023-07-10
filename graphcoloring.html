@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li class="active"><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="buttonContent content">
+        <button class="buttonLeft" onclick="window.location.href = 'shortestpath.html'">&#10094; Shortest Path Problems</button>
+    </div>
+    <div class="containerOverview content">
+        <h1>Graph Coloring</h1><br>
+        <p>Graph coloring is a fundamental concept in graph theory that involves assigning colors to the vertices of a graph in such a way that no two adjacent vertices share the same color. The goal is to use the minimum number of colors while satisfying this constraint. Graph coloring has applications in various fields, including scheduling problems, map coloring, register allocation in compilers, and task assignment.</p><br>
+        <p>Studying graph coloring has provided me with an understanding of how to assign colors to vertices of a graph while avoiding conflicts. I have learned about different coloring algorithms, such as greedy coloring and backtracking algorithms, which aim to find the minimum number of colors required to color a graph. Additionally, I have learned about the concept of chromatic number, which represents the minimum number of colors needed to color a graph. Understanding graph coloring has given me insights into solving practical problems that involve allocating resources, scheduling tasks, or assigning colors to regions on maps.</p><br>
+        <h3>Rules in Graph Coloring:</h3>
+        <p>1. No Adjacent Vertices Have the Same Color:
+          <br>The primary rule in graph coloring is that no two adjacent vertices (connected by an edge) can be assigned the same color. This ensures that neighboring vertices are distinguishable and avoids conflicts in the coloring scheme.</p><br>
+        <p>2. Minimum Number of Colors:
+          <br>The objective in graph coloring is to use the minimum number of colors necessary to color all the vertices in the graph. This means finding the smallest possible number of colors required to satisfy the first rule while ensuring that no adjacent vertices share the same color.</p><br>
+        <p>3. Choice of Colors:
+          <br>The choice of colors used for vertex coloring is typically represented by integers or distinct labels. In practice, colors can be represented by numbers, names, or any other distinct symbols that can differentiate between vertices.</p><br>
+        <p>4. Coloring Constraints:
+          <br>In some cases, additional constraints or rules may be imposed based on the specific problem being addressed. For example, in map coloring, regions with a shared boundary may have restrictions on the colors they can be assigned to, such as avoiding adjacent regions having the same color.</p><br>
+        <p>5. Chromatic Number:
+          <br>The chromatic number of a graph represents the minimum number of colors required to properly color the graph. It is denoted by the symbol χ(G), where G is the graph. The chromatic number is a fundamental property of a graph and provides a measure of its colorability.</p><br>
+        <h3>Examples of Chromatic Number</h3>
+        <div style="text-align: center;"><img src="graph1.png" style="width: 30%; height: auto;" alt=""></div><br>
+        <p>In the above cycle graph, there are 3 different colors for three vertices, and none of the adjacent vertices are colored with the same color. In this graph, the number of vertices is odd. Thus, <br>Chromatic number = 3</p><br>
+        <div style="text-align: center;"><img src="graph2.png" style="width: 30%; height: auto;" alt=""></div><br>
+        <p>In the above cycle graph, there are 2 colors for four vertices, and none of the adjacent vertices are colored with the same color. In this graph, the number of vertices is even. Thus,<br>Chromatic number = 2</p><br>
+        <div style="text-align: center;"><img src="graph3.png" style="width: 30%; height: auto;" alt=""></div><br>
+        <p>In the above graph, there are 4 different colors for five vertices, and two adjacent vertices are colored with the same color (blue). So this graph is not a cycle graph and does not contain a chromatic number.</p><br><br>
+        </div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+    
+        function updateCursorPosition(e) {
+            var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+            cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+        }
+    
+        document.addEventListener("mousemove", updateCursorPosition);
+    </script>
+</body>
+</html>

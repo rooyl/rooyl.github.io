@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gerasta ePortfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="index.html">G-ePo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-family: bodyFont;">Home</a></li>
+        <li><a href="overview.html" style="font-family: bodyFont;">Overview</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="basicsofcounting.html" style="font-family: bodyFont;">Basics of Counting</a></li>
+            <li><a href="pigeonhole.html" style="font-family: bodyFont;">Pigeonhole Principle</a></li>
+            <li><a href="permuandcombi.html" style="font-family: bodyFont;">Permutation and Combination</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="finiteprobability.html" style="font-family: bodyFont;">Finite Probability</a></li>
+              <li><a href="probabilitytheory.html" style="font-family: bodyFont;">Probability Theory</a></li>
+              <li><a href="bayestheorem.html" style="font-family: bodyFont;">Bayes' Theorem</a></li>
+            </ul>
+          </li>
+          <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family: bodyFont;">Period 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="graphsandgraphmodels.html" style="font-family: bodyFont;">Graphs and Graph Models</a></li>
+              <li><a href="shortestpath.html" style="font-family: bodyFont;">Shortest Path Problems</a></li>
+              <li><a href="graphcoloring.html" style="font-family: bodyFont;">Graph Coloring</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+    <div class="buttonContent content">
+        <button class="buttonLeft" onclick="window.location.href = 'bayestheorem.html'">&#10094; Bayes' Theorem</button>
+        <button class="buttonRight" onclick="window.location.href = 'shortestpath.html'">Shortest Path Problems &#10095;</button>
+    </div>
+    <div class="containerOverview content">
+        <h1>Graphs and Graph Models</h1><br>
+        <p>Graph theory is a branch of mathematics that deals with the study of graphs, which are mathematical structures composed of vertices (also called nodes) and edges (connections between vertices). Graphs provide a powerful framework for representing and analyzing relationships, connections, and dependencies between objects or entities. Graph models are used in various fields, including computer science, social networks, transportation systems, and data analysis, to solve problems related to connectivity, optimization, network analysis, and decision-making.</p><br>
+        <p>Studying graphs and graph models has provided me with a deep understanding of the properties and applications of these mathematical structures. I have learned about different types of graphs, such as directed graphs, undirected graphs, weighted graphs, and bipartite graphs, and their corresponding representations. Additionally, I have learned about various graph algorithms and techniques, such as breadth-first search (BFS), depth-first search (DFS), shortest path algorithms (e.g., Dijkstra's algorithm), and spanning tree algorithms (e.g., Prim's algorithm). Understanding graphs and graph models has enabled me to analyze complex systems, identify patterns, optimize routes, solve connectivity problems, and make informed decisions based on the underlying relationships and dependencies within a given problem domain.</p><br>
+        <h3>5 Graphs Models</h3><br>
+        <img src="undirectedgraph.jpg" style="width: 12%; height: auto; float: right;" alt="">
+        <h3 style="font-size: x-large;">1. Undirected Graph</h3>
+        <p>An undirected graph is a graph where edges have no specific direction. The relationships between vertices are symmetrical, meaning that if vertex A is connected to vertex B, then vertex B is also connected to vertex A. Undirected graphs are used to represent relationships that are mutual, such as friendships in a social network.</p><br>
+        <img src="directedgraph.jpg" style="width: 12%; height: auto; float: right;" alt="">
+        <h3 style="font-size: x-large;">2. Directed Graph (Digraph)</h3>
+        <p>A directed graph, or digraph, is a graph where edges have a specific direction. The relationships between vertices are asymmetric, meaning that if vertex A is connected to vertex B, it does not imply that vertex B is connected to vertex A. Directed graphs are used to represent relationships with a one-way flow, such as web page links or dependencies in a directed acyclic graph (DAG).</p><br>
+        <h3 style="font-size: x-large;">3. Weighted Graph</h3>
+        <p>A weighted graph is a graph where edges have associated weights or costs. These weights can represent various attributes, such as distances, travel times, or costs between vertices. Weighted graphs are used in applications like route optimization, network flow analysis, and resource allocation.</p><br>
+        <img src="bipartitegraph.jpg" style="width: 12%; height: auto; float: right;" alt="">
+        <h3 style="font-size: x-large;">4. Bipartite Graph</h3>
+        <p>A bipartite graph is a graph whose vertex set can be divided into two disjoint sets such that there are no edges connecting vertices within the same set. In other words, every edge connects a vertex from one set to a vertex in the other set. Bipartite graphs are used to model relationships between two distinct groups, such as matching students with internships or assigning tasks to workers.</p><br>
+        <h3 style="font-size: x-large;">5. Complete Graph</h3>
+        <p>A complete graph is a graph where there is an edge between every pair of distinct vertices. In other words, every vertex is connected directly to every other vertex. Complete graphs are used in combinatorial problems, network analysis, and algorithms for their well-defined structure and properties.</p><br>
+        <p>These are just a few examples of the many types of graph models used in various fields. Each type has its own characteristics and applications, making graphs a versatile and powerful tool for modeling and analyzing relationships and dependencies in real-world scenarios.</p><br><br>
+    </div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+    
+        function updateCursorPosition(e) {
+            var scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+            cursor.style.cssText = cursor2.style.cssText = "left: " + (e.clientX + scrollX) + "px; top: " + (e.clientY + scrollY) + "px;";
+        }
+    
+        document.addEventListener("mousemove", updateCursorPosition);
+    </script>
+</body>
+</html>
